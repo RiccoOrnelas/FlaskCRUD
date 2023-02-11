@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{%block conteudo%}
+<h2>Atualizar alguma dica</h2>
+<hr>
+{%for mensagem in get_flashed_messages()%}
+<div class="alert alert-danger">{{mensagem}}</div>
+{%endfor%}
+{{atualiza.nome}}
+<form action="{{url_for('atualiza_dica', id=atualiza.id )}}" method="post" class="form-control">
+    <div class="mb-3">
+        <label class="form-label">Nome do Cinema</label>
+        <input name="nome" class="form-control" value="{{atualiza.nome}}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Cidade</label>
+        <textarea name='cidade' class="form-control"> {{atualiza.cidade}} </textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Preço da Entrada</label>
+        <input name="preco_entrada" type="number" class="form-control" value="{{atualiza.preco_entrada}}">
+    </div>
+    <button type="submit" class="btn btn-success">Atualizar</button>
+</form>
+
+{%endblock%}
