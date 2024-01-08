@@ -1,1 +1,4 @@
 Trata-se de um programa desenvolvido em Python com o framwork flask. O usuário pode adicionar, remover, editar e visualizar dicas de cinemas.
+Também na página inicial há a exibição de filmes por categoria indicando suas avaliações críticas
+
+Foi usado neste programa o framwork Flask, criadas rotas e consumida uma API com as informações dos filmes
